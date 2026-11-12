@@ -1,0 +1,949 @@
+<!doctype html>
+<html lang="he" dir="rtl" class="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>שיטת האגן האורגזמי | לנה ליילה</title>
+<link rel="preload" href="assets/hero-laugh.webp" as="image" fetchpriority="high">
+<link rel="preload" href="assets/fonts/rubik-hebrew.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/gsans-hebrew.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+/* the fonts live next to the page, no trip to Google before the first paint (Mor 11.11, "the page is slow") */
+@font-face { font-family: 'Google Sans'; font-style: normal; font-weight: 400 700; font-display: swap; src: url(assets/fonts/gsans-hebrew.woff2) format('woff2'); unicode-range: U+0307-0308, U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F; }
+@font-face { font-family: 'Google Sans'; font-style: normal; font-weight: 400 700; font-display: swap; src: url(assets/fonts/gsans-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'Google Sans'; font-style: normal; font-weight: 400 700; font-display: swap; src: url(assets/fonts/gsans-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Rubik'; font-style: normal; font-weight: 400 800; font-display: swap; src: url(assets/fonts/rubik-hebrew.woff2) format('woff2'); unicode-range: U+0307-0308, U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F; }
+@font-face { font-family: 'Rubik'; font-style: normal; font-weight: 400 800; font-display: swap; src: url(assets/fonts/rubik-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'Rubik'; font-style: normal; font-weight: 400 800; font-display: swap; src: url(assets/fonts/rubik-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+</style>
+<link rel="stylesheet" href="lp.css">
+<link rel="stylesheet" href="lp-light.css">
+<style>
+/* Lena, the orgasmic pelvis. Version 1: skill 1, light. Only what the kit does not have lives here.
+   Lena 10.11: pink and white marble instead of the patterns, her laughing cut-out on top, juicy fruit, no frames, rings or arches */
+.center{text-align:center}
+.uline{text-decoration:underline;text-decoration-color:rgba(var(--a1-rgb),.6);text-decoration-thickness:2px;text-underline-offset:7px}
+
+/* the two marbles, lighter (Lena 11.11: "צריך לעשות אותו בהיר יותר", the veins fought with the headline) */
+html.light body{background:#fbfafb}
+.marble-w{background:linear-gradient(rgba(251,250,251,.6),rgba(251,250,251,.6)),url(assets/marble-white.webp) center/1000px repeat #fbfafb}
+html.light .sec--plum{background:linear-gradient(rgba(249,240,244,.62),rgba(249,240,244,.62)),url(assets/marble-pink.webp) center/900px repeat #f7ebf0}
+.hero.marble-w{background:linear-gradient(rgba(251,250,251,.8),rgba(251,250,251,.8)),url(assets/marble-white.webp) center/1000px repeat #fbfafb}
+.sec--plum::after{display:none}
+/* flow (Lena 11.11: "יותר בפלואו, פחות קאטים"): each section melts into the one before it, no hard line */
+main>.sec,main>.hero{position:relative}
+main>.sec>.wrap{position:relative;z-index:1}
+.marble-w+.sec--plum::before,.sec--plum+.marble-w::before{content:"";position:absolute;inset:0 0 auto;height:clamp(110px,16vw,220px);pointer-events:none;z-index:0}
+.marble-w+.sec--plum::before{background:linear-gradient(#fbfafb,rgba(251,250,251,0))}
+.sec--plum+.marble-w::before{background:linear-gradient(#f8eef2,rgba(248,238,242,0))}
+/* one family for the headlines (Lena 11.11: "יש פה כמה סוגים של פונטים"): Rubik like the headline on top, Google Sans for reading */
+h1,h2,h3,h4,.lie,.lock,.story__quote,.closer__big,.step__num,.paycard .now,.chakra__copy .big,.tri__n,.pills li{font-family:"Rubik","Google Sans",system-ui,Arial,sans-serif}
+/* pictures fade into the page instead of sitting in boxes (Lena 11.11: "הייתי עושה פייד ולא כאלה") */
+.soft img{-webkit-mask-image:radial-gradient(closest-side,#000 72%,transparent);mask-image:radial-gradient(closest-side,#000 72%,transparent)}
+
+/* hero */
+.hero__kicker{color:var(--t-mid);font-weight:500;font-size:clamp(16px,1.6vw,20px);max-width:640px}
+.hero__for{margin-top:18px;font-weight:500;font-size:clamp(17px,1.7vw,21px);line-height:1.6;max-width:680px}
+.hero h1{margin-top:20px;font-size:clamp(25px,5.4vw,34px);line-height:1.22;max-width:none}
+.hero h1 .ln{display:block;text-wrap:balance}
+.hero__sub{max-width:620px}
+.portrait{aspect-ratio:621/754;width:min(80vw,400px)}
+.portrait{position:relative}
+.portrait::before{content:"";position:absolute;inset:6% 4% 10%;border-radius:50%;background:radial-gradient(closest-side,rgba(255,143,165,.34),rgba(255,143,165,0));z-index:0}
+.portrait img{position:relative;z-index:1;-webkit-mask-image:radial-gradient(ellipse 60% 54% at 50% 42%,#000 72%,transparent 100%);mask-image:radial-gradient(ellipse 60% 54% at 50% 42%,#000 72%,transparent 100%)}
+@media(min-width:980px){.hero .wrap{max-width:1400px}.hero__cols{grid-template-columns:1fr auto}.portrait{width:min(30vw,420px)}}
+.hero__sub{font-weight:400;margin-top:26px}
+html.light .creds img{filter:url(#ink);opacity:.62}
+/* the press strip in each logo's own colours (Mor 09.11) */
+html.light .marquee img{filter:none;opacity:1}
+
+/* pain */
+.story .story__open{font-size:clamp(28px,5.2vw,50px);line-height:1.22;max-width:900px;margin-inline:auto;text-wrap:balance}
+
+
+/* ignite */
+.ignite{text-align:center}
+.ignite__h{font-size:clamp(34px,7vw,74px)}
+.ignite__grid{display:grid;gap:clamp(28px,5vw,64px);align-items:center;margin-top:clamp(30px,5vw,60px);text-align:right}
+.ignite__pic{max-width:420px;width:100%;margin-inline:auto}
+.ignite__pic img{width:100%;-webkit-mask-image:radial-gradient(closest-side,#000 64%,transparent);mask-image:radial-gradient(closest-side,#000 64%,transparent)}
+.ignite__copy .lead{font-weight:500;font-size:clamp(20px,2.4vw,27px)}
+.ignite__copy .sub{margin-top:18px;font-size:clamp(18px,2vw,22px)}
+.lie{margin-top:clamp(44px,7vw,90px);font-weight:700;font-size:clamp(52px,13vw,128px);line-height:1;padding-block:.08em}
+.ignite .sub.center{max-width:780px;margin:clamp(22px,3vw,34px) auto 0}
+.floor{max-width:760px;margin:clamp(30px,4vw,48px) auto 0;padding-top:clamp(24px,3vw,34px);border-top:1px solid rgba(var(--a1-rgb),.2)}
+.floor p{font-size:clamp(18px,2.2vw,23px);line-height:1.55;color:var(--t-mid);text-wrap:balance}
+.floor .floor__lead{margin-bottom:8px;font-weight:700;font-size:clamp(20px,2.6vw,27px);color:var(--t-hi)}
+.lock{margin-top:clamp(14px,2vw,22px);font-weight:700;font-size:clamp(22px,3.4vw,36px);line-height:1.3}
+.frozen{margin:clamp(30px,4vw,48px) auto 0;max-width:720px;font-size:clamp(20px,2.8vw,28px);line-height:1.45;font-weight:500}
+.frozen .hot{font-weight:700}
+@media(min-width:900px){.ignite__grid{grid-template-columns:.8fr 1.2fr}}
+
+/* the pelvis is the center (Lena 10.11: right after the closed pelvis, before who she is) */
+.chakra{text-align:center}
+.chakra__h{font-size:clamp(32px,6vw,64px);max-width:900px;margin-inline:auto}
+.chakra__grid{display:grid;gap:clamp(28px,5vw,64px);align-items:center;margin-top:clamp(30px,5vw,60px)}
+.gen{width:min(100%,520px);margin-inline:auto}
+.gen img{width:100%;-webkit-mask-image:linear-gradient(#000 78%,transparent);mask-image:linear-gradient(#000 78%,transparent)}
+.chakra__copy{text-align:right}
+.chakra__copy p{font-size:clamp(18px,2.1vw,22px);color:var(--t-mid);line-height:1.6}
+.chakra__copy p+p{margin-top:16px}
+.chakra__copy .big{font-weight:700;font-size:clamp(26px,4vw,40px);color:var(--t-hi);line-height:1.2}
+.chakra__copy .key{font-weight:700;font-size:clamp(20px,2.5vw,26px);color:var(--a1-text)}
+.chakra__copy .end{color:var(--t-hi);font-weight:500}
+@media(min-width:900px){.chakra__grid{grid-template-columns:1fr 1fr}}
+@media(max-width:899px){.chakra__copy{text-align:center}}
+
+/* about */
+.about__copy h2{font-size:clamp(30px,4.4vw,50px);line-height:1.15}
+.about__copy .sub{font-size:clamp(18px,2.2vw,22px)}
+.about__photo::before{display:none}
+html.light .about__photo .frame{border:0;border-radius:0;box-shadow:none;background:none}
+.about__photo img{object-position:50% 20%}
+.pills{list-style:none;display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.pills li{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:999px;background:var(--card);border:1px solid var(--card-line);box-shadow:var(--sh-1);font-weight:500;font-size:15px;line-height:1.3}
+.pills li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--a1);flex:0 0 auto}
+.pills li:nth-child(3n+2)::before{background:var(--a2)}.pills li:nth-child(3n)::before{background:#ff8fa5}
+.work{display:grid;gap:clamp(24px,4vw,56px);align-items:center;margin-top:clamp(56px,8vw,110px)}
+.work .lead{font-weight:500}
+.work__pics{display:grid;grid-template-columns:.8fr 1.2fr;gap:14px;align-items:end}
+.work__pics figure{border-radius:20px;overflow:hidden;box-shadow:var(--sh-2)}
+.work__pics figure:first-child{aspect-ratio:4/5}
+.work__pics figure:last-child{aspect-ratio:4/3;margin-bottom:10%}
+.work__pics img{width:100%;height:100%;object-fit:cover}
+.moment{display:grid;gap:clamp(24px,4vw,56px);align-items:center;margin-top:clamp(56px,8vw,110px)}
+.moment__pic{max-width:480px;width:100%;margin-inline:auto;aspect-ratio:4/5}
+.moment__pic img{width:100%;height:100%;object-fit:cover;object-position:35% 50%}
+.moment .story__flow{margin-top:0;text-align:right}
+.moment .story__flow p{font-size:clamp(20px,2.8vw,30px);font-weight:500;line-height:1.5}
+.about .story__quote{text-align:center;font-size:clamp(40px,9vw,96px);margin-top:clamp(40px,6vw,80px)}
+.about .about__teach{margin-top:0}
+.about__more p{color:var(--t-mid)}
+.tri{position:relative;width:min(100%,520px);aspect-ratio:300/250;margin:clamp(30px,5vw,50px) auto clamp(20px,3vw,30px)}
+.tri__lines{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.tri__lines path{fill:rgba(var(--a1-rgb),.05);stroke:var(--a1);stroke-width:1.6;stroke-dasharray:6 9;animation:flow 2.6s linear infinite;vector-effect:non-scaling-stroke}
+.tri__n{position:absolute;padding:10px 18px;border-radius:999px;background:var(--card);border:1px solid var(--card-line);box-shadow:var(--sh-1);
+  font-weight:700;font-size:clamp(16px,2.2vw,21px);line-height:1.2;white-space:nowrap}
+.tri__n--1{left:50%;top:12%;transform:translate(-50%,-50%)}
+.tri__n--2{right:0;top:88%;transform:translateY(-50%)}
+.tri__n--3{left:0;top:88%;transform:translateY(-50%)}
+.about .lead.center{max-width:760px;margin:clamp(20px,3vw,30px) auto 0}
+.about .hair{text-align:center}
+.saying{max-width:820px;margin:clamp(44px,6vw,80px) auto 0;text-align:center}
+.saying p{font-size:clamp(19px,2.4vw,24px);line-height:1.55;color:var(--t-mid)}
+.saying p:first-child{font-weight:700;font-size:clamp(23px,3.2vw,34px);line-height:1.3;color:var(--t-hi)}
+.saying p+p{margin-top:12px}
+.statrail .pre{font-weight:500;font-size:clamp(17px,2vw,21px);color:var(--t-mid);margin-bottom:6px}
+/* the press: just the clippings, no browser bars and no tilt (Lena 10.11) */
+html.light .clip{border:0;background:none;border-radius:14px}
+.about .clips{max-width:760px}
+@media(min-width:760px){.about .clips{grid-template-columns:.8fr 1fr;gap:26px;align-items:center}.about .clip--m{margin-top:0}}
+.closer{display:grid;gap:clamp(24px,4vw,56px);align-items:center;margin-top:clamp(56px,8vw,110px)}
+.closer__pic{max-width:440px;width:100%;margin-inline:auto;aspect-ratio:4/5}
+.closer__pic img{width:100%;height:100%;object-fit:cover}
+.closer__txt p{font-size:clamp(19px,2.4vw,24px);line-height:1.5}
+.closer__txt p+p{margin-top:10px}
+.closer__big{margin-top:18px!important;font-weight:700;font-size:clamp(36px,6vw,66px)!important;line-height:1.08!important;padding-block:.06em}
+@media(min-width:900px){
+  .work{grid-template-columns:1fr 1.1fr}
+  .moment{grid-template-columns:1.1fr .9fr}
+  .closer{grid-template-columns:1.1fr .9fr}
+}
+@media(max-width:899px){.work,.moment,.closer{text-align:center}.moment .story__flow{text-align:center}}
+
+/* gym */
+.gym{text-align:center}
+.gym h2{max-width:900px;margin-inline:auto}
+.gym .lead{max-width:780px;margin:clamp(20px,3vw,30px) auto 0}
+.gym .sub{max-width:760px;margin:0 auto}
+@media (min-width:860px){
+  .reel:nth-child(1),.js .reel:nth-child(1):not(.is-on){transform:rotate(7deg) translateY(30px)}
+  .reel:nth-child(2),.js .reel:nth-child(2):not(.is-on){transform:rotate(2.5deg) translateY(6px)}
+  .reel:nth-child(3),.js .reel:nth-child(3):not(.is-on){transform:rotate(-2.5deg) translateY(6px)}
+  .reel:nth-child(4),.js .reel:nth-child(4):not(.is-on){transform:rotate(-7deg) translateY(30px)}
+}
+
+/* method (Mor 11.11: no strawberry beside the name) */
+.method{text-align:center}
+.method__top{display:grid;gap:6px;justify-items:center}
+.method .product__name{font-style:normal;font-size:clamp(38px,8.2vw,96px);margin-top:0;filter:drop-shadow(0 12px 30px var(--name-glow))}
+.method .product__lead{max-width:860px}
+.method .product__lead .mins{display:inline-block;margin-top:6px;font-weight:700;font-size:1.3em;color:var(--a1-text)}
+.method .stage{margin-top:clamp(24px,4vw,50px)}
+.method .stage::before{background:radial-gradient(closest-side,rgba(var(--a1-rgb),.28),transparent)}
+.method .sub{max-width:780px;margin:clamp(22px,3vw,34px) auto 0}
+
+/* offer: three stops */
+.offer4 .road__head h2{max-width:800px;margin-inline:auto}
+.offer4 .stop h4{margin-top:0}
+@media (min-width:860px){.offer4 .stop{display:block}.offer4 .stop__shot{height:auto;padding:22px 22px 0}.offer4 .stop__txt{padding:18px 26px 26px}}
+.offer4 .stop__txt p+p{margin-top:8px}
+
+/* four bonuses (Lena 11.11): white cards with her photo or her fruit melting in, a number, no tablets */
+.bonus4__grid{display:grid;gap:clamp(22px,3vw,32px);max-width:1180px;counter-reset:bn}
+.bcard4{position:relative;counter-increment:bn;display:flex;flex-direction:column;text-align:center;border-radius:28px;overflow:hidden;background:#fff;border:1px solid rgba(224,16,58,.1);box-shadow:var(--sh-2)}
+.bcard4__pic{aspect-ratio:16/9;overflow:hidden}
+.bcard4__pic img{width:100%;height:100%;object-fit:cover;-webkit-mask-image:linear-gradient(#000 55%,transparent);mask-image:linear-gradient(#000 55%,transparent)}
+.bcard4__txt{position:relative;padding:0 clamp(20px,3vw,36px) clamp(26px,3vw,36px)}
+.bcard4__txt::before{content:counter(bn);display:grid;place-items:center;width:46px;height:46px;margin:-34px auto 12px;border-radius:50%;background:linear-gradient(150deg,#ff3358,#c80f35);color:#fff;font:800 21px/1 "Rubik","Google Sans",sans-serif;box-shadow:0 12px 26px -10px rgba(200,15,53,.6)}
+.bcard4 h2{font-size:clamp(26px,3vw,36px);line-height:1.18;color:#2b0a14;text-wrap:balance}
+.bcard4 .bcard4__sub{margin-top:8px;font-weight:700;font-size:clamp(17px,1.9vw,20px);color:#b80d31}
+.bcard4 p{margin-top:12px;font-size:clamp(17px,1.8vw,19px);line-height:1.55;color:#4a1a28;text-wrap:balance}
+@media(min-width:900px){.bonus4__grid{grid-template-columns:1fr 1fr}}
+
+/* the real messages, three at a time inside the story (Lena and Mor 11.11: spread, not in the offer) */
+.pgroup{display:flex;flex-direction:column;gap:14px;max-width:520px;margin:clamp(44px,6vw,80px) auto 0}
+.pshot{width:min(90%,440px);border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 22px 44px -24px rgba(120,10,40,.38),0 2px 8px rgba(120,10,40,.06)}
+.pshot:nth-child(odd){align-self:flex-start}
+.pshot:nth-child(even){align-self:flex-end}
+.pshot img{display:block;width:100%;height:auto}
+@media(min-width:900px){.pgroup{flex-direction:row;align-items:center;justify-content:center;max-width:1120px;gap:24px}.pshot{width:auto;flex:1 1 0;max-width:350px}.pshot:nth-child(even){margin-top:46px}}
+
+/* the anchor: three steps down, and each number is crossed out once the next step shows */
+.anchor2{text-align:center}
+.ask h2{max-width:780px;margin-inline:auto}
+.ask p{margin:12px auto 0;max-width:640px;text-wrap:balance;font-size:clamp(18px,2.1vw,22px);color:var(--t-mid)}
+.ladder{max-width:760px;margin:clamp(30px,5vw,52px) auto 0}
+.step{position:relative;padding:clamp(22px,3vw,30px) 0}
+.step+.step::before{content:"";position:absolute;top:-16px;left:50%;width:2px;height:32px;margin-left:-1px;border-radius:2px;background:linear-gradient(var(--a2-line),var(--a1))}
+.step p{max-width:640px;margin-inline:auto;font-size:clamp(17px,1.9vw,20px);line-height:1.6}
+.step p+p{margin-top:6px}
+.step .step__no{font-weight:700;color:var(--t-hi);font-size:clamp(20px,2.4vw,26px);line-height:1.4}
+.step .step__lead{margin-top:16px;font-weight:500;color:var(--t-hi)}
+.step .step__lead:first-child{margin-top:0}
+.step .step__why{margin-top:12px;color:var(--t-mid);text-wrap:balance}
+.step__num{position:relative;display:inline-block;margin-top:8px;font-weight:700;letter-spacing:-.03em;line-height:1.05;color:var(--t-hi);font-size:clamp(46px,8vw,82px)}
+.step__num--big{font-size:clamp(62px,13vw,128px)}
+.nb{white-space:nowrap}
+.step__num::after{content:"";position:absolute;left:-5%;right:-5%;top:50%;height:.08em;border-radius:9px;background:var(--no);transform:scaleX(0);transform-origin:right;transition:transform .8s var(--ease-out) .35s}
+.step:has(+ .step.in) .step__num::after{transform:scaleX(1)}
+
+/* the price card (the same card twice: after the anchor and at the very end) */
+html.light .paycard{max-width:620px;background:#fff}
+.paycard__name{font-size:clamp(27px,4.4vw,38px);line-height:1.2;background:var(--name-grad);-webkit-background-clip:text;background-clip:text;color:transparent;padding-bottom:.08em}
+.paycard__list{list-style:none;margin:16px auto 0;padding:0;text-align:center;max-width:480px}
+.paycard__list li{padding:11px 4px;font-size:clamp(16px,1.8vw,18px);line-height:1.5;color:var(--t-hi);text-wrap:balance}
+.paycard .mock{max-width:480px;margin:-4px auto 12px;filter:var(--sh-img)}
+.paycard__list li+li{border-top:1px solid var(--card-line)}
+.paycard__list .bn{display:inline-block;margin-inline-end:8px;padding:1px 10px;border-radius:999px;background:rgba(224,16,58,.09);color:#b80d31;font-weight:700;font-size:.86em;white-space:nowrap}
+.paycard__prices{margin-top:20px;padding-top:20px;border-top:1px solid var(--card-line)}
+.paycard .old{font-size:clamp(18px,2.4vw,22px);line-height:1.55;color:var(--t-mid)}
+.paycard .old s{color:var(--t-low);text-decoration-color:var(--no);text-decoration-thickness:2px}
+.paycard .only{margin-top:12px;font-weight:700;font-size:clamp(18px,2.2vw,22px);color:var(--t-hi)}
+.paycard .now{margin-top:2px;font-weight:700;font-size:clamp(64px,15vw,112px);line-height:1;background:var(--a1-tgrad);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:none;padding-bottom:.06em}
+.paycard .perday{margin-top:6px;font-size:16px;color:var(--t-mid)}
+/* the launch clock (Mor 12.11): counts down to the price going up on 21.11, and hides itself at zero */
+.timer{margin:18px auto 4px;text-align:center}
+.timer[hidden]{display:none}
+.timer__label{font-weight:700;font-size:16px;color:#b80d31}
+.timer__row{display:flex;justify-content:center;gap:8px;margin-top:10px}
+.timer__box{flex:0 1 74px;padding:10px 4px 8px;border-radius:14px;background:#fff4f6;border:1px solid rgba(224,16,58,.15)}
+.timer__n{font:800 clamp(26px,7vw,32px)/1 "Rubik","Google Sans",sans-serif;color:#e0103a;font-variant-numeric:tabular-nums}
+.timer__u{margin-top:5px;font-size:12.5px;color:var(--t-mid)}
+.paycard .btn{margin-top:22px}
+.paycard .paynote,.cta-mid .paynote{text-wrap:balance}
+/* the email form inside the card (09.11): field, the card's button, a thank-you line after sending */
+.paycard .buyform{max-width:460px;margin:24px auto 0;gap:10px}
+.paycard .buyform label{font-weight:500;font-size:15px;color:var(--t-hi)}
+html.light .paycard .buyform input{font:inherit;font-size:18px;padding:16px 20px;direction:ltr;text-align:right;color:var(--t-hi);border-color:rgba(43,10,20,.22)}
+.paycard .buyform input::placeholder{color:rgba(43,10,20,.42)}
+.paycard .buyform .btn{margin-top:6px}
+/* speed (Mor 11.11, "the page is slow"): short fades that start just before a block reaches the screen */
+.js .reveal{transform:translateY(14px);transition:opacity .45s var(--ease-out),transform .5s var(--ease-out)}
+.js .reveal[data-d="1"]{transition-delay:.05s}
+.js .reveal[data-d="2"]{transition-delay:.1s}
+.js .reveal[data-d="3"]{transition-delay:.15s}
+.js .reveal[data-d="4"]{transition-delay:.2s}
+.fly-r,.fly-l{transition:opacity .5s var(--ease-out),transform .65s var(--ease-out)}
+.js .story__quote.reveal{transform:scale(.94);filter:none}
+.js .story__quote.reveal.in{transition:opacity .45s var(--ease-out),transform .55s var(--ease-out)}
+.js .rise .w{transition:opacity .45s var(--ease-out),transform .5s var(--ease-out),filter .45s var(--ease-out);transition-delay:calc(var(--i)*22ms + .05s)}
+
+/* the must-tick box: 18 and up, the terms, the health statement and Lena's mailing line (Mor 11.11) */
+.paycard .buyform .agree{display:flex;align-items:flex-start;gap:10px;margin-top:2px;text-align:right;font-weight:400;font-size:13.5px;line-height:1.5;color:var(--t-mid);cursor:pointer}
+.paycard .buyform .agree{-webkit-tap-highlight-color:transparent;-webkit-user-select:none;user-select:none}
+html.light .paycard .buyform .agree input{-webkit-appearance:none;appearance:none;flex:0 0 auto;display:grid;place-content:center;width:20px;height:20px;margin:1px 0 0;padding:0;border:1.5px solid rgba(43,10,20,.38);border-radius:6px;background:#fff;box-shadow:none;cursor:pointer;-webkit-tap-highlight-color:transparent;transition:background-color .15s,border-color .15s}
+html.light .paycard .buyform .agree input::before{content:"";width:10px;height:5px;border:solid #fff;border-width:0 0 2.5px 2.5px;transform:translateY(-1px) rotate(-45deg);opacity:0}
+html.light .paycard .buyform .agree input:checked{background:#e0103a;border-color:#e0103a}
+html.light .paycard .buyform .agree input:checked::before{opacity:1}
+html.light .paycard .buyform .agree input:focus{outline:none;box-shadow:none}
+html.light .paycard .buyform .agree input:focus-visible{outline:2px solid rgba(224,16,58,.5);outline-offset:2px}
+.paycard .buyform input:-webkit-autofill{-webkit-box-shadow:0 0 0 60px #fff inset;-webkit-text-fill-color:#2b0a14}
+.agree a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+.buyform.noagree .agree{color:var(--no)}
+html.light .paycard .buyform.noagree .agree input{outline:2px solid var(--no);outline-offset:2px;border-color:var(--no)}
+.legal{display:flex;justify-content:center;gap:24px;padding:20px 16px 28px;background:#f7ebf0;font-size:13px}
+.legal a{color:var(--t-mid);text-decoration:underline;text-underline-offset:3px}
+.buyform.bad input{border:2px solid var(--no)!important;box-shadow:0 0 0 4px rgba(224,16,58,.16)}
+.buyform.bad label{color:var(--no)}
+.buyform.sent .btn{animation:none;opacity:.8}
+.buyform.sent .btn::before,.buyform.sent .btn::after{animation:none;opacity:0}
+.paycard .thanks{color:var(--a1-text)}
+.discreet{margin-top:10px;font-size:15px;line-height:1.55;color:var(--t-mid);text-align:center;text-wrap:balance}
+.discreet .nb{unicode-bidi:isolate}
+.discreet::before{content:"";display:inline-block;width:15px;height:15px;margin-inline-end:7px;vertical-align:-2px;background:var(--a1-text);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7 10V7a5 5 0 0 1 10 0v3h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h1zm2 0h6V7a3 3 0 0 0-6 0v3z'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7 10V7a5 5 0 0 1 10 0v3h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h1zm2 0h6V7a3 3 0 0 0-6 0v3z'/%3E%3C/svg%3E") center/contain no-repeat}
+.pays{list-style:none;margin:18px 0 0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.pays li{height:40px;min-width:56px;padding:0 10px;border-radius:10px;background:#fff;border:1px solid var(--card-line);display:grid;place-items:center}
+.pays img{height:22px;width:auto}
+.pays .bit{min-width:0;padding:0;overflow:hidden;border:0}
+.pays .bit img{height:40px}
+.pays img[src$=".svg"]{height:32px}
+@media(max-width:480px){.pays{gap:6px}.pays li{height:36px;min-width:0;padding:0 7px}.pays img{height:18px}.pays img[src$=".svg"]{height:28px}.pays .bit img{height:36px}}
+
+/* "you won't believe how many messages": a wall of incoming bubbles, then Lena's reply */
+.msgs{text-align:center}
+.msgs h2{max-width:840px;margin-inline:auto}
+.bubbles{max-width:1100px;margin:clamp(28px,4vw,46px) auto 0;columns:3 290px;column-gap:18px}
+.bubble{display:block;width:fit-content;max-width:100%;margin:0 0 14px;margin-inline-end:auto;break-inside:avoid;padding:13px 18px;border-radius:20px 6px 20px 20px;
+  background:#fff;border:1px solid var(--card-line);box-shadow:var(--sh-1);text-align:right;font-size:clamp(17px,1.8vw,19px);line-height:1.5;color:var(--t-hi)}
+.reply{display:flex;align-items:flex-end;gap:14px;max-width:780px;margin:clamp(22px,3vw,34px) auto 0;text-align:right}
+.reply__b{flex:1;padding:clamp(20px,2.6vw,28px);border-radius:26px 26px 26px 6px;background:linear-gradient(150deg,#d81039 0%,#c80f35 55%,#b80d31 100%);box-shadow:0 40px 80px -40px rgba(200,15,53,.6)}
+.reply__b p{color:#fff;font-weight:500;font-size:clamp(17px,1.9vw,20px);line-height:1.6}
+.reply__b p+p{margin-top:8px}
+.reply__ava{flex:0 0 auto;width:58px;height:58px;border-radius:50%;object-fit:cover;border:3px solid #fff;box-shadow:var(--sh-1)}
+
+/* what the method will make you feel: plain lines beside her in the field, no boxes and no arch */
+.feel__grid{display:grid;gap:clamp(28px,4vw,60px);align-items:center;max-width:1180px}
+.feel h2{text-align:center}
+.feel__list{list-style:none;margin:22px 0 0;padding:0}
+.feel__list li{padding:12px 4px;font-size:clamp(17px,1.8vw,19px);line-height:1.5;color:var(--t-hi)}
+.feel__list li+li{border-top:1px solid rgba(var(--a1-rgb),.16)}
+.feel__punch{margin-top:24px;font-weight:700;font-size:clamp(20px,2.4vw,26px);line-height:1.45;color:var(--t-hi);text-wrap:balance}
+.feel__note{margin-top:14px;font-size:15.5px;line-height:1.6;color:var(--t-mid);text-wrap:pretty}
+.feel__pic{max-width:420px;width:100%;margin-inline:auto}
+.feel__pic img{width:100%;-webkit-mask-image:radial-gradient(closest-side,#000 64%,transparent);mask-image:radial-gradient(closest-side,#000 64%,transparent)}
+@media(min-width:900px){.feel__grid{grid-template-columns:1.2fr .8fr}.feel h2{text-align:right}.feel__punch,.feel__note{text-align:right}}
+@media(max-width:899px){.feel__txt{text-align:center}}
+
+/* the letter: an airmail sheet beside her, hand on her heart */
+.letter__grid{display:grid;gap:clamp(28px,4vw,56px);align-items:center;max-width:1220px}
+.letter__paper{position:relative;overflow:hidden;padding:clamp(30px,4vw,54px) clamp(24px,4vw,54px);border-radius:24px;background:#fff;border:1px solid var(--card-line);box-shadow:var(--sh-2);text-align:right}
+.letter__paper::before{content:"";position:absolute;inset-inline:0;top:0;height:9px;background:repeating-linear-gradient(135deg,#ff3358 0 14px,#fff 14px 22px,#ff8fa5 22px 36px,#fff 36px 44px)}
+.letter__paper h2{font-size:clamp(26px,4vw,40px)}
+.letter__hi{margin-top:18px;font-weight:700;font-size:clamp(19px,2.2vw,22px);color:var(--t-hi)}
+.letter__body{margin-top:12px}
+.letter__body p{font-size:clamp(17px,1.9vw,20px);line-height:1.55;color:var(--t-mid)}
+.letter__body p+p{margin-top:9px}
+.letter__pic{max-width:min(400px,82vw);width:100%;margin-inline:auto}
+.letter__pic img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 22%}
+@media(min-width:900px){.letter__grid{grid-template-columns:1.6fr .7fr}}
+.cta-mid{max-width:520px;margin:clamp(36px,5vw,60px) auto 0;text-align:center}
+.cta-mid .btn{width:100%}
+.cta-mid .paynote{margin-top:12px}
+
+/* the questions, and the last card */
+.faq__ava{display:block;width:112px;height:112px;margin:0 auto 16px;border-radius:50%;object-fit:cover;border:4px solid #fff;box-shadow:var(--sh-2)}
+.faqsec .faq{text-align:right}
+html.light .faqsec .faq details p{font-weight:400}
+.paysec{text-align:center}
+.paysec .pricecard{margin-top:0}
+
+@media (prefers-reduced-motion:reduce){.tri__lines path{animation:none!important}.step__num::after{transition:none}}
+/* the headline Mor chose in the headline lab, 09.11 11:32 ("דיו ותות עם שינויים"), from מעבדת-כותרת/בחירות.json */
+.hero__copy{display:flex!important;flex-direction:column;align-items:center;text-align:center}
+.hero__kicker{order:0}
+.hero__for{order:1}
+.hero h1{order:2}
+.hero__sub{order:3}
+.hero h1{font-family:"Rubik","Google Sans",system-ui,Arial,sans-serif;font-size:calc(clamp(25px,5.4vw,34px) * 1.6);line-height:1.14;letter-spacing:-0.02em;max-width:780px;margin-top:20px}
+@media(max-width:700px){.hero h1{max-width:100%;font-size:calc(clamp(25px,5.4vw,34px) * 1.07)}}
+.hero h1 .ln:nth-child(1){font-weight:800}
+.hero h1 .ln:nth-child(1) .w{background:none;color:#2b0a14}
+.hero h1 .ln:nth-child(2){font-weight:800}
+.hero h1 .ln:nth-child(2) .w{background:none;color:#e0103a}
+.hero h1 .ln:nth-child(3){font-weight:800}
+.hero h1 .ln:nth-child(3) .w{background:none;color:#2b0a14}
+.hero h1 .ln .w.lab-mk{-webkit-background-clip:border-box;background-clip:border-box;color:#2b0a14;background:linear-gradient(transparent 56%,#ffc2cf 56%,#ffc2cf 92%,transparent 92%)}
+.hero__kicker{font-family:"Rubik","Google Sans",system-ui,Arial,sans-serif;font-weight:700;color:#b80d31;font-size:calc(clamp(16px,1.6vw,20px) * 0.9);max-width:680px;margin:0}
+.hero__for{font-weight:500;color:#5c2a38;font-size:calc(clamp(17px,1.7vw,21px) * 1);margin-top:18px;border:0;padding:0}
+.hero__for .uline{text-decoration:underline;text-decoration-color:rgba(224,16,58,.6);text-decoration-thickness:2px;text-underline-offset:7px;background:none;padding:0;border-radius:0;color:inherit}
+.hero__sub{font-weight:400;color:#2b0a14;font-size:calc(clamp(18px,2vw,22px) * 1);background:none;box-shadow:none;border-radius:0}
+.hero__sub::before,.hero__sub::after{display:none}
+.hero__sub .uline{text-decoration:none}
+/* Mor, 09.11: on a computer the whole page 5% smaller ("הכל מאוד ענק"). Phones and tablets stay as they are */
+@media (min-width:1024px){html{zoom:.95}}
+</style>
+<!-- Meta Pixel: לנה-פיקסל-נשים -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+/* בתצוגה המקומית לא יורים כלום */
+if(!/^(localhost|127\.0\.0\.1)$/.test(location.hostname)){
+fbq('init','1554730159793560');
+fbq('track','PageView');
+}
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1554730159793560&ev=PageView&noscript=1"/></noscript>
+</head>
+<body class="no-js">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><filter id="ink" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0 0 0 0 .169  0 0 0 0 .039  0 0 0 0 .078  0 0 0 1 0"/></filter></svg>
+<div id="spot"></div>
+<main>
+
+<!-- ============ 1 · HERO (Lena 10.11: her laughing cut-out on white marble, no rings) ============ -->
+<section class="hero marble-w" id="s-hero">
+  <div class="wrap hero__in">
+    <div class="seen">
+      <div class="marquee"><div class="marquee__track" id="seenTrack">
+        <img class="tight" src="assets/logos/color/kan11.webp" alt="כאן 11" width="256" height="96">
+        <img src="assets/logos/color/ynet.webp" alt="ynet" width="225" height="96">
+        <img src="assets/logos/color/102fm.webp" alt="102FM" width="182" height="96">
+        <img src="assets/logos/color/adama.webp" alt="אדמה" width="105" height="96">
+        <img src="assets/logos/color/isrotel.webp" alt="ישרוטל" width="153" height="96">
+        <img src="assets/logos/color/asif.webp" alt="אסיף" width="107" height="96">
+        <img src="assets/logos/color/sagol.webp" alt="סגול" width="150" height="96">
+        <img src="assets/logos/color/masa.webp" alt="מסע" width="96" height="96">
+      </div></div>
+    </div>
+    <div class="hero__cols">
+      <div class="hero__copy">
+        <p class="hero__kicker">המרצה הישראלית מהמכללה לסקסולוגיה באוסטרליה<br>חושפת את השריר האירוטי שאחראי לאורגזמה שלך…</p>
+        <p class="hero__for"><span class="uline">לנשים שעושות את זה בשבילו ואומרות לעצמן, ״בא לי שיבוא לי״</span></p>
+        <h1 class="rise"><span class="ln">"איך להגביר את החשק המיני, להגיע לאורגזמות עוצמתיות,</span><span class="ln">לחזק את רצפת האגן ולהפוך לאישה מלאה בתשוקה וחשק</span><span class="ln">על ידי טכניקת האגן האורגזמי תוך 21 יום"</span></h1>
+        <p class="hero__sub"><span class="uline">בלי להרגיש אשמה שאת כבויה, בלי לעשות גם כשאת לא רוצה,<br>ובלי לזייף רק כדי שהוא לא יתבאס עלייך.</span></p>
+      </div>
+      <div class="portrait">
+        <img src="assets/hero-laugh.webp" alt="לנה ליילה צוחקת" width="621" height="754" fetchpriority="high">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2 · PAIN ============ -->
+<section class="sec sec--plum story" id="s-pain">
+  <div class="wrap">
+    <h2 class="story__open reveal">מה עושים כשהחשק ירד?</h2>
+    <div class="story__flow reveal">
+      <p>יכול להיות שבחודשים או אפילו בשנים האחרונות<br>את מרגישה פחות תשוקה, פחות סיכוך ופחות אנרגיה מינית.</p>
+      <p class="gap">אותן התנוחות, אותן התנועות, אותו המשחק.</p>
+      <p class="gap">פתאום הסקס הופך להיות סימון וי שמאשר שעדיין הכל בסדר ביניכם...</p>
+    </div>
+    <h3 class="story__quote gt-a1 reveal">רק שבפועל, את כבויה.</h3>
+    <div class="story__flow reveal">
+      <p>יכול להיות שאת מהנשים שמזייפות רק כדי שהוא ירגיש שהכל בסדר,</p>
+      <p>או אולי מוצאת את עצמך נותנת תירוץ אחרי תירוץ על למה היום פחות,</p>
+      <p>ואולי את פשוט מנסה בכוח להכריח את עצמך להיכנס לאווירה, מרגישה יבשה<br>אבל כלום לא מצליח לעורר אותך.</p>
+    </div>
+    <div class="story__flow reveal">
+      <p>אז את מתחילה להרגיש אשמה שאת מאכזבת אותו,<br>מאשימה את הגוף שלך או את הגיל<br>ובטוחה שמשהו בך פשוט "התקלקל".</p>
+      <p class="gap">מרגישה מתוסכלת מהעובדה שאת צריכה להילחם<br>במחשבות רק כדי לייצר טיפה של חשק,<br>שקשה לך להגיע לאורגזמה, ואולי שהגוף שלך נשאר אדיש וחסר תחושה לכל מגע.</p>
+    </div>
+    <div class="pgroup">
+      <figure class="pshot reveal"><img src="assets/proofs/proof-02.webp" alt="הודעה מאישה שתרגלה עם לנה" width="753" height="514" loading="lazy"></figure>
+      <figure class="pshot reveal" data-d="1"><img src="assets/proofs/proof-12.webp" alt="הודעה מאישה שתרגלה עם לנה" width="619" height="247" loading="lazy"></figure>
+      <figure class="pshot reveal" data-d="2"><img src="assets/proofs/proof-14.webp" alt="הודעה מאישה שתרגלה עם לנה" width="649" height="163" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3 · IGNITE ============ -->
+<section class="sec ignite marble-w" id="s-ignite">
+  <div class="wrap">
+    <h2 class="ignite__h reveal">לעורר את האנרגיה המינית</h2>
+    <div class="ignite__grid">
+      <figure class="ignite__pic reveal"><img src="assets/ignite-hair.webp" alt="" width="760" height="1013" loading="lazy"></figure>
+      <div class="ignite__copy">
+        <p class="lead reveal">בתור סקסולוגית סומטית שלמדה באוסטרליה ולימדה באחת המכללות<br>המובילות בעולם, אני חייבת שתביני משהו פשוט…</p>
+        <p class="sub reveal" data-d="1">הסיבה שאין לך חשק ואת לא חווה אורגזמות<br>היא לא קשורה לגיל שלך, להורמונים שלך או לכמה זמן שאתם ביחד.</p>
+        <p class="sub reveal" data-d="2">שנים גרמו לנו לחשוב שהחשק המיני שלנו דועך באופן<br>טבעי אחרי לידות או כשנכנסים לשגרה.</p>
+      </div>
+    </div>
+    <p class="lie gt-a1 reveal">אבל זה שקר!</p>
+    <p class="sub center reveal">החיים המודרניים והשוחקים שאנחנו חיות, הפרידו אותנו מהגוף שלנו.<br>אנחנו חיות 100% בתוך הראש: חושבות, מתכננות בעולם דיגיטלי, דואגות ומנותקות לחלוטין ממה שקורה למטה.</p>
+    <p class="sub center reveal">אנחנו יושבות רוב היום על כיסא, ואז מצפות להגיע למיטה ולהיות איזה אריה שואג ופראי.</p>
+    <p class="lock reveal">זה פשוט לא עובד ככה.</p>
+    <p class="frozen reveal">כתוצאה מזה, נוצרת אצלך תופעה שנקראת <span class="hot">"האגן הסגור"</span>.</p>
+    <div class="floor reveal"><p class="floor__lead">וזה אפילו לא רק קשור למיניות.</p><p>לידות, עומס ושנים של ישיבה מחלישים את רצפת האגן, ויכולות להופיע גם בריחות שתן.<br>לכן חיזוק רצפת האגן הוא חיוני לכל אישה, גם פונקציונלי וגם מאוד אירוטי.</p></div>
+    <div class="pgroup">
+      <figure class="pshot reveal"><img src="assets/proofs/proof-06.webp" alt="הודעה מאישה שתרגלה עם לנה" width="798" height="699" loading="lazy"></figure>
+      <figure class="pshot reveal" data-d="1"><img src="assets/proofs/proof-10.webp" alt="הודעה מאישה שתרגלה עם לנה" width="797" height="209" loading="lazy"></figure>
+      <figure class="pshot reveal" data-d="2"><img src="assets/proofs/proof-05.webp" alt="הודעה מאישה שתרגלה עם לנה" width="900" height="596" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4 · THE PELVIS IS THE CENTER (Lena 10.11: moved up, right after the closed pelvis) ============ -->
+<section class="sec sec--plum chakra" id="s-chakra">
+  <div class="wrap">
+    <h2 class="chakra__h reveal">האגן הוא הסנטר של המיניות שלנו.</h2>
+    <div class="chakra__grid">
+      <figure class="gen reveal"><img src="assets/lena-pelvis.webp" alt="" width="815" height="658" loading="lazy"></figure>
+      <div class="chakra__copy">
+        <p class="big reveal">יש לך באגן גנרטור.</p>
+        <p class="reveal">ליטרלי גנרטור של אנרגיה, של חשק, של אורגזמיות.<br>הוא מדליק את כל המערכות שלך.</p>
+        <p class="reveal">אבל כשאת חיה בראש וקפוצת תחת מבוקר עד לילה, הגנרטור הזה כבוי.<br>רצפת האגן שלך מכווצת רוב היום, ומקבלת פחות דם ופחות חמצן.</p>
+        <p class="key reveal">כלומר, השריר האירוטי שלך נעול.</p>
+        <p class="end reveal">אז יש פחות סיכוך, פחות תחושה, פחות עונג, פחות אורגזמות.<br>ואת שוכבת איתו ולא מרגישה כלום באזור המין.</p>
+      </div>
+    </div>
+    <div class="pgroup">
+      <figure class="pshot reveal"><img src="assets/proofs/proof-09.webp" alt="הודעה מאישה שתרגלה עם לנה" width="567" height="207" loading="lazy"></figure>
+      <figure class="pshot reveal" data-d="1"><img src="assets/proofs/proof-01.webp" alt="הודעה מאישה שתרגלה עם לנה" width="736" height="623" loading="lazy"></figure>
+      <figure class="pshot reveal" data-d="2"><img src="assets/proofs/proof-15.webp" alt="הודעה מאישה שתרגלה עם לנה" width="612" height="314" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5 · ABOUT ============ -->
+<section class="sec about marble-w" id="s-about">
+  <div class="wrap">
+    <div class="about__grid">
+      <figure class="about__photo soft reveal"><div class="frame"><img src="assets/about-lilac.webp" alt="לנה ליילה" width="733" height="1100" loading="lazy"></div></figure>
+      <div class="about__copy">
+        <h2 class="reveal">אני לנה ליילה,<br>ופעם קיבלתי אורגזמה באמצע שיעור פילאטיס.</h2>
+        <p class="sub reveal" data-d="1">כן כן, הכי מפתיע ומביך.</p>
+        <ul class="pills reveal" data-d="2">
+          <li>סקסולוגית סומטית</li><li>מאמנת למיניות ויחסים</li><li>מדריכת טנטרה</li><li>מדריכת פילאטיס</li><li>מורה לתנועה</li><li>מתרגלת פאולה</li><li>מעסה תאילנדית</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="work">
+      <p class="lead reveal">שמונה שנים הייתי מדריכת פילאטיס.<br>העברתי סדנאות על רצפת האגן עוד מקדמת דנא, ועבדתי עם נשים בשיקום וחיזוק רצפת אגן.<br>האגן היה הקטע שלי הרבה לפני שהוא היה סקסי.</p>
+      <div class="work__pics reveal" data-bleed>
+        <figure><img src="assets/work-teach.webp" alt="לנה ליילה מלמדת עם מודל של אגן" width="460" height="554" loading="lazy"></figure>
+        <figure><img src="assets/work-group.webp" alt="לנה ליילה מעבירה סדנה" width="700" height="466" loading="lazy"></figure>
+      </div>
+    </div>
+
+    <div class="moment">
+      <div class="story__flow reveal">
+        <p>ואז, יום אחד, באמצע אימון רגיל לגמרי, הגוף שלי פשוט נדלק.</p>
+        <p class="gap">לא חשבתי על סקס. לא היה שם אף אחד.</p>
+        <p class="gap">רק אני, המזרן, והאגן שלי שזז.</p>
+      </div>
+      <figure class="moment__pic soft reveal"><img src="assets/pilates-floor.webp" alt="" width="880" height="1100" loading="lazy"></figure>
+    </div>
+
+    <h3 class="story__quote gt-a1 reveal">ושם נפל לי האסימון.</h3>
+    <p class="about__teach reveal">אורגזמה לא נפלה מהשמיים.<br>עבדתי עליה בידיים ובאגן.</p>
+    <div class="pgroup">
+      <figure class="pshot reveal"><img src="assets/proofs/proof-03.webp" alt="הודעה מאישה שתרגלה עם לנה" width="735" height="356" loading="lazy"></figure>
+      <figure class="pshot reveal" data-d="1"><img src="assets/proofs/proof-07.webp" alt="הודעה מאישה שתרגלה עם לנה" width="648" height="255" loading="lazy"></figure>
+      <figure class="pshot reveal" data-d="2"><img src="assets/proofs/proof-11.webp" alt="הודעה מאישה שתרגלה עם לנה" width="761" height="403" loading="lazy"></figure>
+    </div>
+
+    <div class="about__more">
+      <p class="reveal">וזה לא שתמיד היה לי קל.<br>גם לי היה קשה לגמור פעם, ועברתי מסע ארוך עם המיניות שלי, כולל כאבים.<br>זייפתי הרבה פעמים אורגזמות, והייתי מאוד בריצוי במיניות שלי.</p>
+      <p class="reveal">אז יצאתי למסע של ריפוי. חקרתי ותרגלתי על עצמי,<br>ובגלל שזה עשה לי שינוי כל כך משמעותי, התחלתי לאמן נשים.</p>
+      <p class="reveal">בגיל 36 ארזתי מזוודה וטסתי לאוסטרליה, ללמוד סקסולוגיה סומטית באחת המכללות המובילות בעולם.</p>
+    </div>
+    <div class="trip reveal" data-bleed>
+      <figure><img src="assets/trip-plane.webp" alt="" width="640" height="800" loading="lazy"></figure>
+      <figure><img src="assets/trip-lighthouse.webp" alt="" width="640" height="800" loading="lazy"></figure>
+      <figure><img src="assets/trip-nature.webp" alt="" width="640" height="800" loading="lazy"></figure>
+    </div>
+    <div class="credrow">
+      <div class="creds reveal">
+        <img class="tall" src="assets/logos/logo-institute-somatic.webp" alt="" width="500" height="499" loading="lazy">
+        <img src="assets/logos/logo-sseaa.webp" alt="" width="293" height="236" loading="lazy">
+        <img src="assets/logos/logo-acsb.webp" alt="" width="500" height="82" loading="lazy">
+      </div>
+      <figure class="certshot fly-l"><img src="assets/cert.webp" alt="" width="1100" height="766" loading="lazy"></figure>
+    </div>
+    <div class="about__more">
+      <p class="reveal">הייתי כל כך טובה בזה, שהפכתי לאחת המרצות במכללה.</p>
+      <div class="lectures" data-bleed>
+        <figure class="reveal"><img src="assets/lecture-1.webp" alt="" width="800" height="1000" loading="lazy"></figure>
+        <figure class="reveal" data-d="1"><img src="assets/lecture-2.webp" alt="" width="800" height="1000" loading="lazy"></figure>
+      </div>
+    </div>
+
+    <p class="lead center reveal">חזרתי לארץ וחיברתי שלושה עולמות לשיטה אחת:</p>
+    <div class="tri reveal">
+      <svg class="tri__lines" viewBox="0 0 300 250" preserveAspectRatio="none" aria-hidden="true"><path d="M150 30 L268 220 L32 220 Z"/></svg>
+      <p class="tri__n tri__n--1">סקסולוגיה סומטית</p>
+      <p class="tri__n tri__n--2">טנטרה</p>
+      <p class="tri__n tri__n--3">בריאות האגן</p>
+    </div>
+    <p class="lead center reveal">בטנטרה, האגן הוא המקור של האנרגיה המינית.<br>אז כשלומדים להפעיל אותו, לומדים לעורר אנרגיה מינית בכל הגוף.</p>
+    <p class="hair reveal">ככה נולדה שיטת האגן האורגזמי.<br>שיטה ייחודית שאין כמוה בארץ, ומאה אחוז שלי.</p>
+
+    <div class="saying">
+      <p class="reveal">ואין שום דבר שאני מלמדת היום שלא ניסיתי על עצמי.</p>
+      <p class="reveal" data-d="1">אני עושה את התרגולים האלה גם רגע לפני שאני עולה להרצות.</p>
+      <p class="reveal" data-d="2">כי זה לא רק כלי לחיי המין. זה כלי להרגיש אנרגיה, עוררות וחשק.</p>
+    </div>
+    <div class="statrail reveal"><p class="pre">היום אני מלמדת את זה בסדנאות, בהרצאות ובקליניקה,</p><p>ומעל <span class="num gt-a1" data-count="100000">100,000</span> אנשים עוקבים אחריי.</p></div>
+    <div class="clips" data-bleed>
+      <figure class="clip clip--mag reveal"><img src="assets/press-mag.webp" alt="" width="560" height="714" loading="lazy"></figure>
+      <figure class="clip clip--m reveal" data-d="1"><img src="assets/press-ynet-m.webp" alt="" width="746" height="710" loading="lazy"></figure>
+    </div>
+
+    <div class="closer">
+      <div class="closer__txt">
+        <p class="reveal">אני לא פה בשביל להיות הגורו שלך.</p>
+        <p class="reveal" data-d="1">אני פה כדי לעזור לך להיזכר שמגיע לך עונג, ושהוא נמצא אצלך, באגן.</p>
+        <p class="closer__big gt-a1 reveal" data-d="2">לכל גוף מגיע עונג.</p>
+      </div>
+      <figure class="closer__pic soft reveal"><img src="assets/laugh-flowers.webp" alt="" width="667" height="1000" loading="lazy"></figure>
+    </div>
+    <div class="pgroup">
+      <figure class="pshot reveal"><img src="assets/proofs/proof-04.webp" alt="הודעה מאישה שתרגלה עם לנה" width="747" height="721" loading="lazy"></figure>
+      <figure class="pshot reveal" data-d="1"><img src="assets/proofs/proof-08.webp" alt="הודעה מאישה שתרגלה עם לנה" width="309" height="132" loading="lazy"></figure>
+      <figure class="pshot reveal" data-d="2"><img src="assets/proofs/proof-13.webp" alt="הודעה מאישה שתרגלה עם לנה" width="682" height="151" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6 · LIKE A GYM ============ -->
+<section class="sec sec--plum gym" id="s-gym">
+  <div class="wrap">
+    <h2 class="reveal">כמו חדר כושר, רק פי מיליון יותר מענג</h2>
+    <p class="lead reveal" data-d="1">רצפת האגן היא השריר האירוטי שלך. החוזק שלו נקבע מהיכולת שלו לנוע, להיאסף ולהרפות, ולכן הוא צריך תנועה, הוא לא יכול להיות נעול.<br>וחיזוק רצפת האגן זה לא רק משהו שקשור לשיעורי פילאטיס.<br>תחשבי על זה כמו מעין חדר כושר אירוטי.</p>
+    <p class="hair reveal">תרגולים שמלמדים אותך להאריך, להעמיק ולשחרר.</p>
+    <p class="sub reveal">לאמן את הקשר שבין המוח לתנועה של האגן.<br>חיזוק כזה ממקד את התחושות ואת תשומת הלב שלך בתוך האגן ובאזור המין.</p>
+    <div class="reels reveal" id="reels">
+      <div class="reels__track">
+        <figure class="reel"><video muted playsinline preload="none" data-poster="assets/reels/reel-DIdh2WxMT00.webp" data-src="assets/reels/reel-DIdh2WxMT00.mp4" width="360" height="640" tabindex="-1"></video><span class="reel__views"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg>147.2K</span></figure>
+        <figure class="reel"><video muted playsinline preload="none" data-poster="assets/reels/reel-C2NQo26I6LW.webp" data-src="assets/reels/reel-C2NQo26I6LW.mp4" width="360" height="640" tabindex="-1"></video><span class="reel__views"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg>254.6K</span></figure>
+        <figure class="reel"><video muted playsinline preload="none" data-poster="assets/reels/reel-DMh96u1s_TY.webp" data-src="assets/reels/reel-DMh96u1s_TY.mp4" width="360" height="640" tabindex="-1"></video><span class="reel__views"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg>300.7K</span></figure>
+        <figure class="reel"><video muted playsinline preload="none" data-poster="assets/reels/reel-DR7dwbmDMfw.webp" data-src="assets/reels/reel-DR7dwbmDMfw.mp4" width="360" height="640" tabindex="-1"></video><span class="reel__views"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg>178K</span></figure>
+      </div>
+      <div class="reels__dots" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7 · THE METHOD ============ -->
+<section class="sec product method marble-w" id="s-method">
+  <div class="wrap">
+    <div class="method__top">
+      <div class="method__copy">
+        <h2 class="product__name reveal">״שיטת האגן האורגזמי״</h2>
+        <p class="product__lead reveal" data-d="1">לחזק את רצפת האגן, לעורר את החשק המיני והתחושתיות<br>ולחוות אורגזמות עוצמתיות תוך 21 יום ובהשקעה של<br><span class="mins">5 עד 8 דקות ביום בלבד</span></p>
+      </div>
+    </div>
+    <figure class="stage reveal"><img src="assets/mk-program.webp" alt="שיטת האגן האורגזמי" width="1000" height="561" loading="lazy"></figure>
+    <p class="sub reveal">תוכנית דיגיטלית שמשלבת את עולמות הסקסולוגיה הסומטית, הטנטרה ובריאות האגן,<br>בתרגול שמדליק מחדש את השריר האירוטי שלך</p>
+  </div>
+</section>
+
+<!-- ============ 8 · THE OFFER (Lena 10.11: the muscle, the six foundations, the gym) ============ -->
+<section class="sec sec--plum road offer4" id="s-offer">
+  <div class="wrap">
+    <div class="road__head"><h2 class="reveal">זה מה שמחכה לך בפנים:</h2></div>
+    <div class="road__track">
+      <svg class="road__path" viewBox="0 0 1000 300" preserveAspectRatio="none" aria-hidden="true">
+        <defs><linearGradient id="rmGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff3358"/><stop offset="1" stop-color="#ff8fa5"/></linearGradient></defs>
+        <path class="rm-line rm-base" d="M750,50 C750,100 250,100 250,150 C250,200 750,200 750,250"/>
+        <path class="rm-line rm-flow" d="M750,50 C750,100 250,100 250,150 C250,200 750,200 750,250"/>
+      </svg>
+      <div class="stop reveal">
+        <div class="stop__shot"><img src="assets/mk-part-2.webp" alt="" width="1300" height="655" loading="lazy"></div>
+        <div class="stop__txt"><h4>השריר שאף אחד לא סיפר לך עליו</h4><p>שימי לב ואגן, יקרה.</p><p>מה זה השריר האירוטי שעוטף את כל איברי המין שלך?</p><p>ולמה ככל שהוא חזק יותר, גם האורגזמה שלך חזקה יותר.</p></div>
+      </div>
+      <div class="stop reveal">
+        <div class="stop__shot"><img src="assets/mk-part-3.webp" alt="" width="1300" height="655" loading="lazy"></div>
+        <div class="stop__txt"><h4>שש אבני היסוד של האגן האורגזמי</h4><p>שחרור אורגזמי, איסוף אורגזמי, תנועה אורגזמית, קצב אורגזמי, נשימה אורגזמית וטנטרה.</p><p>על השש האלה עומד כל תרגול שתעשי איתי.</p></div>
+      </div>
+      <div class="stop reveal">
+        <div class="stop__shot"><img src="assets/mk-part-4.webp" alt="" width="1300" height="655" loading="lazy"></div>
+        <div class="stop__txt"><h4>חדר הכושר האירוטי: 21 יום של אגן אורגזמי</h4><p>אימון יומי סופר ג׳וסי של 5 עד 8 דקות, קצר מספיק לנשים עסוקות (כמוני וכמוך).</p><p>יותר חשק, יותר עוררות, יותר אורגזמיות, יותר סיכוך ותחושה, ורצפת אגן חזקה.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 9 · FOUR BONUSES (Lena 11.11: her four, written by Gemini; white cards, no tablets, no strawberries) ============ -->
+<section class="sec bonus4 marble-w" id="s-bonus">
+  <div class="wrap bonus4__grid">
+    <article class="bcard4 reveal">
+      <figure class="bcard4__pic"><img src="assets/bed-hands.webp" alt="" width="940" height="788" loading="lazy"></figure>
+      <div class="bcard4__txt"><h2>בונוס מדריך התנוחות לאורגזמה מעיפה</h2><p class="bcard4__sub">סרטון הדרכה מעשי עם הדגמות שלי</p><p>איך לקחת את תרגולי האגן ישר לחדר המיטות יחד עם הפרטנר או הפרטנרית.<br>לחדד את התחושתיות, להגביר את הסיכוך ולהגיע לאורגזמיות סופר עמוקה.</p></div>
+    </article>
+    <article class="bcard4 reveal">
+      <figure class="bcard4__pic"><img src="assets/bonus-fig.webp" alt="" width="1400" height="788" loading="lazy"></figure>
+      <div class="bcard4__txt"><h2>בונוס מדיטציית עונג סומטית לאגן</h2><p class="bcard4__sub">קובץ אודיו להאזנה והרפיה</p><p>כלי סומטי פשוט שממקד את כל תשומת הלב שלך במה שאת מרגישה באזור המין.<br>מעיר את החשק והעוררות ומחבר אותך לעונג טבעי, פועם וג׳וסי.</p></div>
+    </article>
+    <article class="bcard4 reveal">
+      <figure class="bcard4__pic"><img src="assets/bonus-peach.webp" alt="" width="1400" height="862" loading="lazy"></figure>
+      <div class="bcard4__txt"><h2>בונוס למיטיבות לכת</h2><p class="bcard4__sub">שני תרגולי עומק של 20 דקות איתי</p><p>לימים שבהם בא לך להמשיך להתענג ולקחת את התנועה עוד צעד קדימה.<br>להעיר את השריר האירוטי בשכבות הכי עמוקות ולהרגיש את האגן חי.</p></div>
+    </article>
+    <article class="bcard4 reveal">
+      <figure class="bcard4__pic"><img src="assets/bonus-papaya.webp" alt="" width="1100" height="900" loading="lazy"></figure>
+      <div class="bcard4__txt"><h2>בונוס לצוללות לעומק</h2><p class="bcard4__sub">שני שיעורי עומק של שעה מלאה עם לנה ליילה</p><p>שני שיעורי זום מוקלטים שבהם נצלול יחד הכי עמוק שיש כדי להעיר את האגן שלך.<br>בשביל הימים שבהם בא לך לצלול עד הסוף ולהתמסר לעונג טוטאלי.</p></div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ 11 · THE ANCHOR AND THE PRICE CARD ============ -->
+<section class="sec anchor2 marble-w" id="s-anchor">
+  <div class="wrap">
+    <div class="ask reveal">
+      <h2>אז כמה שווה כל העונג הזה?</h2>
+      <p>כמה שווה לך לחזור להיות אישה אירוטית ומתענגת, שהמיניות לא מרגישה לה כמו עוד משימה שצריך להספיק, שנהנית מהגוף שלה, מלאת אנרגיה וחשק?</p>
+    </div>
+    <div class="ladder">
+      <div class="step reveal">
+        <p class="step__lead">השווי של שיטת האגן האורגזמי, עם ארבעת הבונוסים, הוא:</p>
+        <span class="step__num step__num--big">2,370 ש״ח</span>
+        <p class="step__why">כי היום שעה אחת איתי עולה 800 עד 1,200 ש״ח, וכאן יש לך אותי לכמה שעות רצופות, כולל כל הבונוסים.</p>
+      </div>
+      <div class="step reveal">
+        <p class="step__no">אבל זה לא המחיר שאת הולכת לשלם.</p>
+        <p>כי יש לך זכות מולדת לעונג, ואני רוצה שהיא תגיע לכמה שיותר נשים.</p>
+        <p>וזאת תוכנית דיגיטלית, אז הכול נגיש לך ישר מהבית ומהאגן.</p>
+        <p class="step__lead">לכן המחיר הרגיל של התוכנית הוא:</p>
+        <span class="step__num">497 ש״ח</span>
+      </div>
+      <div class="step reveal">
+        <p class="step__no">אבל רגע, רגע, רגע.</p>
+        <p>אם את קוראת את השורה הזאת, הגעת בדיוק בזמן.</p>
+        <p>האגן האורגזמי יוצא עכשיו לאוויר, וזאת ההשקה.</p>
+        <p>ובהשקה אני רוצה לחגוג עם הנשים הראשונות שנכנסות איתי.</p>
+        <p>אז עד מוצאי שבת, 21.11, הורדתי עוד 150 ש״ח מהמחיר.</p>
+        <p class="step__lead">תחזיקי את האגן חזק...</p>
+      </div>
+    </div>
+    <div class="pricecard paycard reveal">
+      <figure class="mock"><img src="assets/mk-program.webp" alt="" width="1000" height="561" loading="lazy"></figure>
+      <h3 class="paycard__name">שיטת האגן האורגזמי</h3>
+      <ul class="paycard__list">
+        <li>חדר הכושר האירוטי: 21 יום של אגן אורגזמי, <span class="nb">5 עד 8 דקות ביום</span></li>
+        <li>השריר שאף אחד לא סיפר לך עליו</li>
+        <li>שש אבני היסוד של האגן האורגזמי</li>
+        <li><span class="bn">בונוס 1</span> סרטון תנוחות מעשי לחדר המיטות</li>
+        <li><span class="bn">בונוס 2</span> קובץ אודיו סומטי לעונג באגן</li>
+        <li><span class="bn">בונוס 3</span> שני תרגולי עומק של 20 דקות</li>
+        <li><span class="bn">בונוס 4</span> שני שיעורי עומק של שעה</li>
+      </ul>
+      <div class="paycard__prices">
+        <p class="old">את לא משלמת <s>2,370 ש״ח</s></p>
+        <p class="old">וגם לא <s>497 ש״ח</s></p>
+        <p class="only">מחיר ההשקה שלך:</p>
+        <span class="now">347 ש״ח</span>
+        <p class="perday">כלומר בערך 17 ש״ח לכל יום של אימון.</p>
+      </div>
+      <div class="timer" hidden>
+        <p class="timer__label">מחיר ההשקה נגמר במוצאי שבת, 21.11.</p>
+        <div class="timer__row">
+          <div class="timer__box"><div class="timer__n" data-t="d">00</div><div class="timer__u">ימים</div></div>
+          <div class="timer__box"><div class="timer__n" data-t="h">00</div><div class="timer__u">שעות</div></div>
+          <div class="timer__box"><div class="timer__n" data-t="m">00</div><div class="timer__u">דקות</div></div>
+          <div class="timer__box"><div class="timer__n" data-t="s">00</div><div class="timer__u">שניות</div></div>
+        </div>
+      </div>
+      <form class="buyform" novalidate>
+        <label for="em1">המייל שלך</label>
+        <input type="email" id="em1" name="email" required autocomplete="email" inputmode="email" placeholder="you@email.com">
+        <label class="agree"><input type="checkbox" name="agree" required><span>אני מעל גיל 18, קראתי ואני מסכימה ל<a href="terms/" target="_blank" rel="noopener">תקנון</a> ול<a href="health/" target="_blank" rel="noopener">הצהרת הבריאות</a>, ומאשרת קבלת תכנים מענגים והטבות למייל מלנה ליילה.</span></label>
+        <button class="btn btn--pulse" type="submit">לנה, אני בפנים ✋🏻</button>
+        <p class="thanks" role="status">מעולה. עוד רגע עוברים לתשלום.</p>
+      </form>
+      <p class="paynote">זה מחיר ההשקה. <span class="nb">אחרי ההשקה,</span> המחיר הוא 497 ש״ח.</p>
+      <p class="discreet">החיוב בכרטיס מופיע בשם <span class="nb">LN Academy</span>, ושום דבר לא יסגיר מה קנית.</p>
+      <ul class="pays"><li class="bit"><img src="assets/pay/bit.webp" alt="ביט" width="96" height="96" loading="lazy"></li><li><img src="assets/pay/applepay.svg" alt="Apple Pay" width="24" height="24" loading="lazy"></li><li><img src="assets/pay/googlepay.svg" alt="Google Pay" width="24" height="24" loading="lazy"></li><li><img src="assets/pay/visa.webp" alt="Visa" width="256" height="96" loading="lazy"></li><li><img src="assets/pay/mastercard.webp" alt="Mastercard" width="115" height="96" loading="lazy"></li><li><img src="assets/pay/isracard.webp" alt="ישראכרט" width="164" height="96" loading="lazy"></li></ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 12 · THE MESSAGES (Mor's copy) ============ -->
+<section class="sec sec--plum msgs" id="s-msgs">
+  <div class="wrap">
+    <h2 class="reveal">את לא מאמינה כמה הודעות כאלה אני מקבלת מנשים:</h2>
+    <div class="bubbles">
+      <p class="bubble reveal">"כבר אין לי חשק כמו פעם"</p>
+      <p class="bubble reveal">"אני רוצה אורגזמות חזקות יותר ולא יודעת מאיפה להתחיל"</p>
+      <p class="bubble reveal">"אחרי הלידה המיניות והגוף שלי השתנו ואני לא יודעת מה לעשות"</p>
+      <p class="bubble reveal">"אני יודעת שאני צריכה לחזק את רצפת האגן שלי…"</p>
+      <p class="bubble reveal">"אני רוצה להיות רטובה יותר"</p>
+      <p class="bubble reveal">"אני לא מרגישה כלום שם למטה"</p>
+      <p class="bubble reveal">"אני רוצה להנות יותר במיטה"</p>
+      <p class="bubble reveal">"האורגזמה שלי מהירה וקצרה (אם בכלל) ואני יודעת שאפשר יותר"</p>
+      <p class="bubble reveal">"אני רוצה להחזיק תשוקה וחשק לחיים שלי"</p>
+      <p class="bubble reveal">"נמאס לי להרגיש לא נח בגוף שלי"</p>
+    </div>
+    <div class="reply reveal">
+      <div class="reply__b"><p>אז קודם כל חשוב לי להגיד לך שאת ממש ממש לא לבד, יקרה.</p><p>זה טבעי וזה קורה לכל כך הרבה מאיתנו, ואת לא מקולקלת.</p><p>העונג והתשוקה שלך לא נעלמו לשום מקום, הם פשוט מחכים שתעירי אותם דרך הגוף.</p><p>ובדיוק בשביל זה יצרתי את התוכנית הזאת, כדי להחזיר לאגן שלך את התנועה, החיות והעונג שמגיעים לך.</p></div>
+      <img class="reply__ava" src="assets/lena-avatar.webp" alt="" width="360" height="360" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ============ 13 · WHAT YOU WILL FEEL (Mor's copy; the pelvic floor lines first, Lena 10.11) ============ -->
+<section class="sec feel marble-w" id="s-feel">
+  <div class="wrap feel__grid">
+    <div class="feel__txt">
+      <h2 class="reveal">מה שיטת האגן האורגזמי תגרום לך להרגיש?</h2>
+      <ul class="feel__list reveal">
+        <li>תחזק את רצפת האגן ותתמוך במצבים של צניחת איברים</li>
+        <li>תחזק את השרירים ותתמוך במצבים של בריחות שתן</li>
+        <li>תעזור לשחרר כאבי גב, כאבי אגן ואי נוחות באזור המין</li>
+        <li>תגרום לך לחוות אורגזמות אינטנסיביות, חזקות ועמוקות יותר</li>
+        <li>תעלה את החשק המיני והעוררות שלך</li>
+        <li>תגביר את תחושות העונג</li>
+        <li>תעלה את רמת הסיכוך והרטיבות הטבעית שלך</li>
+        <li>תעזור לך להרגיש את החדירה והמגע הרבה יותר עמוק</li>
+        <li>תחבר אותך מחדש לגוף שלך</li>
+      </ul>
+      <p class="feel__punch reveal">זאת שיטה ייחודית שהופכת את התרגול לאימון סופר ג'וסי וסקסי שמשדרג את כל מה שקורה במיטה.</p>
+      <p class="feel__note reveal">חשוב לי להזכיר שהתוכנית לא מחליפה טיפול או ייעוץ רפואי, ואם יש לך כאב ממושך חשוב תמיד ללכת להיבדק.</p>
+    </div>
+    <figure class="feel__pic reveal"><img src="assets/feel-field.webp" alt="לנה ליילה צוחקת בשדה" width="820" height="1025" loading="lazy"></figure>
+  </div>
+</section>
+
+<!-- ============ 14 · THE LETTER (Mor's copy) AND A BUTTON ============ -->
+<section class="sec sec--plum letter" id="s-letter">
+  <div class="wrap">
+    <div class="letter__grid">
+      <div class="letter__paper reveal">
+        <h2>מכתב קטן ממני אלייך ולאגן שלך</h2>
+        <p class="letter__hi">היי יקרה,</p>
+        <div class="letter__body"><p>כתבתי את המילים האלה בדיוק בשבילך.</p><p>בשביל אותם רגעים שאת מרגישה קצת מנותקת מהגוף שלך,</p><p>עייפה, פחות רטובה, או שהחשק פשוט מרגיש אחרת לגמרי.</p><p>אולי ילדת ואת רוצה להחזיר את החיבור והתחושתיות למיטה,</p><p>ואולי אחרי הלידות רצפת האגן שלך חלשה יותר, יש בריחות שתן, ואת רוצה לחזק אותה.</p><p>ואולי גיל המעבר הביא איתו שינויים שאיש לא הכין אותך אליהם.</p><p>יכול להיות שניסית פיזיותרפיה של רצפת האגן, אבל המיניות והאורגזמה נשארו בחוץ.</p><p>ואני יודעת היטב שאין לך שעות פנויות בתוך החיים העמוסים שלך.</p><p>בדיוק בשביל זה יצרתי משהו מדויק של 5 עד 8 דקות ביום,</p><p>שמחזיר דם וחמצן, ביטחון ועונג אמיתי ישר לאגן.</p><p>כי השינוי שאת מחפשת מתחיל תמיד בגוף ולא בראש.</p></div>
+      </div>
+      <figure class="letter__pic soft reveal"><img src="assets/deep-white.webp" alt="לנה ליילה עם יד על הלב" width="562" height="1000" loading="lazy"></figure>
+    </div>
+    <div class="cta-mid reveal">
+      <a class="btn btn--pulse" href="#s-pay" data-pay>לנה, אני בפנים ✋🏻</a>
+      <p class="paynote">מחיר ההשקה שלך: 347 ש״ח</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 15 · QUESTIONS ============ -->
+<section class="sec faqsec marble-w" id="s-faq">
+  <div class="wrap">
+    <img class="faq__ava reveal" src="assets/lena-avatar.webp" alt="" width="360" height="360" loading="lazy">
+    <h2 class="faq__head reveal">שאלות ותשובות</h2>
+    <div class="faq reveal">
+      <details open><summary>אין לי זמן. זה באמת רק כמה דקות ביום?</summary><p>כן, יקרה. אימון יומי של 5 עד 8 דקות, במשך 21 יום.</p><p>בניתי אותו בשביל נשים עסוקות, כמוני וכמוך.</p><p>וארבעת הבונוסים מחכים לך לימים שבהם בא לך יותר.</p></details>
+      <details><summary>אני צריכה ניסיון בפילאטיס, ביוגה או בתרגילי רצפת אגן?</summary><p>לא. התוכנית מתחילה מההתחלה: למה לתרגל בכלל, ואיך לתרגל.</p><p>ומשם, צעד אחרי צעד, לשריר האירוטי ולשש אבני היסוד.</p></details>
+      <details><summary>שני שיעורי העומק הם בזום בלייב?</summary><p>לא. אלה שיעורי זום מוקלטים, שעה מלאה כל אחד.</p><p>אז את צוללת איתי לעומק מתי שבא לך.</p></details>
+      <details><summary>מה ההבדל בין זה לבין פיזיותרפיה של רצפת האגן?</summary><p>כאן המיניות והאורגזמה לא נשארות בחוץ. הן בדיוק העניין.</p><p>השיטה משלבת את עולמות הסקסולוגיה הסומטית, הטנטרה ובריאות האגן, בתרגול שמדליק מחדש את השריר האירוטי שלך.</p><p>והיא לא מחליפה טיפול או ייעוץ רפואי.</p></details>
+      <details><summary>עברתי לידה, או שאני בגיל המעבר. זה מתאים לי?</summary><p>בניתי את התוכנית גם בשביל הרגעים האלה, כשהגוף השתנה והחשק מרגיש אחרת.</p><p>אם ילדת לא מזמן, או שכואב לך, חשוב יקרה שתתייעצי קודם עם הרופא או רופאת הנשים שלך.</p></details>
+      <details><summary>אני לא בזוגיות. זה בשבילי?</summary><p>ברור. העונג שלך הוא באחריות שלך.</p><p>והוא ליטרלי בידיים ובאגן שלך.</p></details>
+      <details><summary>לנה, למה המחיר כל כך נמוך?</summary><p>כי זאת ההשקה.</p><p>וכי זאת תוכנית דיגיטלית.</p><p>אחרי ההשקה, המחיר הוא 497 ש״ח.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 16 · THE CARD AGAIN ============ -->
+<section class="sec sec--plum paysec" id="s-pay">
+  <div class="wrap">
+    <div class="pricecard paycard reveal">
+      <figure class="mock"><img src="assets/mk-program.webp" alt="" width="1000" height="561" loading="lazy"></figure>
+      <h3 class="paycard__name">שיטת האגן האורגזמי</h3>
+      <ul class="paycard__list">
+        <li>חדר הכושר האירוטי: 21 יום של אגן אורגזמי, <span class="nb">5 עד 8 דקות ביום</span></li>
+        <li>השריר שאף אחד לא סיפר לך עליו</li>
+        <li>שש אבני היסוד של האגן האורגזמי</li>
+        <li><span class="bn">בונוס 1</span> סרטון תנוחות מעשי לחדר המיטות</li>
+        <li><span class="bn">בונוס 2</span> קובץ אודיו סומטי לעונג באגן</li>
+        <li><span class="bn">בונוס 3</span> שני תרגולי עומק של 20 דקות</li>
+        <li><span class="bn">בונוס 4</span> שני שיעורי עומק של שעה</li>
+      </ul>
+      <div class="paycard__prices">
+        <p class="old">את לא משלמת <s>2,370 ש״ח</s></p>
+        <p class="old">וגם לא <s>497 ש״ח</s></p>
+        <p class="only">מחיר ההשקה שלך:</p>
+        <span class="now">347 ש״ח</span>
+        <p class="perday">כלומר בערך 17 ש״ח לכל יום של אימון.</p>
+      </div>
+      <div class="timer" hidden>
+        <p class="timer__label">מחיר ההשקה נגמר במוצאי שבת, 21.11.</p>
+        <div class="timer__row">
+          <div class="timer__box"><div class="timer__n" data-t="d">00</div><div class="timer__u">ימים</div></div>
+          <div class="timer__box"><div class="timer__n" data-t="h">00</div><div class="timer__u">שעות</div></div>
+          <div class="timer__box"><div class="timer__n" data-t="m">00</div><div class="timer__u">דקות</div></div>
+          <div class="timer__box"><div class="timer__n" data-t="s">00</div><div class="timer__u">שניות</div></div>
+        </div>
+      </div>
+      <form class="buyform" novalidate>
+        <label for="em2">המייל שלך</label>
+        <input type="email" id="em2" name="email" required autocomplete="email" inputmode="email" placeholder="you@email.com">
+        <label class="agree"><input type="checkbox" name="agree" required><span>אני מעל גיל 18, קראתי ואני מסכימה ל<a href="terms/" target="_blank" rel="noopener">תקנון</a> ול<a href="health/" target="_blank" rel="noopener">הצהרת הבריאות</a>, ומאשרת קבלת תכנים מענגים והטבות למייל מלנה ליילה.</span></label>
+        <button class="btn btn--pulse" type="submit">לנה, אני בפנים ✋🏻</button>
+        <p class="thanks" role="status">מעולה. עוד רגע עוברים לתשלום.</p>
+      </form>
+      <p class="paynote">זה מחיר ההשקה. <span class="nb">אחרי ההשקה,</span> המחיר הוא 497 ש״ח.</p>
+      <p class="discreet">החיוב בכרטיס מופיע בשם <span class="nb">LN Academy</span>, ושום דבר לא יסגיר מה קנית.</p>
+      <ul class="pays"><li class="bit"><img src="assets/pay/bit.webp" alt="ביט" width="96" height="96" loading="lazy"></li><li><img src="assets/pay/applepay.svg" alt="Apple Pay" width="24" height="24" loading="lazy"></li><li><img src="assets/pay/googlepay.svg" alt="Google Pay" width="24" height="24" loading="lazy"></li><li><img src="assets/pay/visa.webp" alt="Visa" width="256" height="96" loading="lazy"></li><li><img src="assets/pay/mastercard.webp" alt="Mastercard" width="115" height="96" loading="lazy"></li><li><img src="assets/pay/isracard.webp" alt="ישראכרט" width="164" height="96" loading="lazy"></li></ul>
+    </div>
+  </div>
+</section>
+<footer class="legal"><a href="terms/" target="_blank" rel="noopener">תקנון</a><a href="health/" target="_blank" rel="noopener">הצהרת בריאות</a></footer>
+</main>
+
+<script src="lp.js"></script>
+<script>
+/* the launch clock: until motzei shabbat 21.11.2026 at 23:59 Israel time (Mor 12.11), then it disappears */
+(function(){
+  var end=new Date('2026-11-21T23:59:59+02:00').getTime(), t=document.querySelectorAll('.timer');
+  if(!t.length)return;
+  function pad(n){return n<10?'0'+n:''+n}
+  function tick(){
+    var left=Math.floor((end-Date.now())/1000);
+    if(left<=0){t.forEach(function(x){x.hidden=true});return false}
+    var v={d:Math.floor(left/86400),h:Math.floor(left%86400/3600),m:Math.floor(left%3600/60),s:left%60};
+    t.forEach(function(x){x.hidden=false;x.querySelectorAll('[data-t]').forEach(function(n){n.textContent=pad(v[n.dataset.t])})});
+    return true
+  }
+  if(tick())var iv=setInterval(function(){if(!tick())clearInterval(iv)},1000);
+})();
+</script>
+<script>
+(function(){
+  /* מהירות: אחרי שהדף עלה, התמונות של המשך הדף נטענות ברקע לפי הסדר, ארבע בכל פעם, כדי שיחכו כשהיא גוללת */
+  window.addEventListener('load',function(){
+    /* התמונות של הרילסים מחכות עד שהראש של הדף עלה */
+    document.querySelectorAll('video[data-poster]').forEach(function(v){v.poster=v.getAttribute('data-poster')});
+    var imgs=[].slice.call(document.querySelectorAll('img[loading="lazy"]'));
+    function next(){
+      var batch=imgs.splice(0,4), left=batch.length;
+      if(!left){return}
+      var t=setTimeout(next,4000);
+      function done(){if(--left===0){clearTimeout(t);next()}}
+      batch.forEach(function(im){
+        if(im.complete&&im.naturalWidth){done();return}
+        im.addEventListener('load',done,{once:true});im.addEventListener('error',done,{once:true});
+        im.loading='eager';
+      });
+    }
+    setTimeout(next,200);
+  });
+  /* דף הסליקה של הקורס בקארדקום, משייקה 12.11 */
+  var CHECKOUT_URL='https://secure.cardcom.solutions/EA/EA5/6fdvgM8u50OG15tzRtSUjA/PaymentSP';
+  /* רישום המייל אצל שייקה, לרשימה ״האגן האורגזמי- נוטשות עגלה״ ברב מסר */
+  var SUBSCRIBE_URL='https://lena-forms.vercel.app/api/subscribe';
+  document.querySelectorAll('form.buyform').forEach(function(f){
+    var sent=false, em=f.querySelector('input[type=email]'), agree=f.querySelector('input[name=agree]');
+    if(agree){agree.addEventListener('change',function(){f.classList.remove('noagree')})}
+    em.addEventListener('input',function(){
+      f.classList.remove('bad');
+      /* תיקון של המייל אחרי שליחה, כשעוד לא עברנו לתשלום, פותח את הטופס מחדש */
+      if(sent&&!CHECKOUT_URL){sent=false;f.classList.remove('sent');var b=f.querySelector('button');if(b){b.disabled=false}}
+    });
+    f.addEventListener('submit',function(ev){
+      ev.preventDefault();
+      if(sent){return}
+      if(!em.checkValidity()||!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em.value.trim())){f.classList.add('bad');em.focus();return}
+      if(agree&&!agree.checked){f.classList.add('noagree');agree.focus();return}
+      sent=true;
+      f.classList.add('sent');
+      var btn=f.querySelector('button');
+      if(btn){btn.disabled=true}
+      /* בלי דף סליקה לא יורים אירועים ולא שומרים מזהה, כדי שבדיקות לא ייספרו בפיקסל */
+      if(!CHECKOUT_URL){return}
+      /* מזהה לקנייה: דף התודה קורא אותו (nl_cid) וסופר את הרכישה פעם אחת */
+      var cid='nlc_';
+      for(var i=0;i<16;i++){cid+='abcdefghijklmnopqrstuvwxyz0123456789'.charAt(Math.floor(Math.random()*36))}
+      try{localStorage.setItem('nl_cid',JSON.stringify({id:cid,t:Date.now()}))}catch(e){}
+      if(window.fbq){fbq('track','Lead',{},{eventID:'lead_'+cid});fbq('track','InitiateCheckout',{currency:'ILS',value:347},{eventID:'ic_'+cid})}
+      var went=false, go=function(){if(went){return}went=true;location.href=CHECKOUT_URL};
+      if(!SUBSCRIBE_URL){setTimeout(go,600);return}
+      /* הסליקה לא מחכה לרב מסר. אם הרישום איטי או נופל, עוברים בכל מקרה */
+      var to=setTimeout(go,2500);
+      fetch(SUBSCRIBE_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:em.value})})
+        .catch(function(){}).then(function(){clearTimeout(to);go()});
+    });
+  });
+})();
+</script>
+</body>
+</html>

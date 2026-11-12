@@ -1,0 +1,126 @@
+/* Light mode for the Mor landing page kit. Learned from carusela.com/demo (30.10.2026), which is this same kit flipped to light.
+   Load AFTER lp.css and put class="light" on <html>. Nothing in lp.css changes; the dark page still works without this file.
+   Re-skin through the two palette blocks only: html.light (the white page) and the inverted card (the one dark moment). */
+
+/* ============================================================
+   palette 1: the white page. Shown here in Lena's colors.
+   ============================================================ */
+html.light{
+  color-scheme:light;
+  /* strawberry: white page, a faint pink wash for alternating sections */
+  --bg:#fff; --bg-rgb:255,255,255; --bg-2:#fff8f9; --glow-rgb:255,51,88;
+  --sf-1:#fff; --sf-2:#fff8f9; --sf-3:#ffeef2; --sf-4:#ffe1e8; --sf-5:#fff; --sf-6:#fff5f7; --sf-7:#2b0a14; --sf-8:#fff;
+  /* text: the darkest shade of the strawberry */
+  --ivory:#2b0a14; --ivory-rgb:43,10,20;
+  --t-hi:#2b0a14; --t-mid:rgba(43,10,20,.78); --t-low:rgba(43,10,20,.64);
+  /* accent 1: juicy strawberry red as a fill, a deeper red as text */
+  --a1:#ff3358; --a1-rgb:255,51,88; --a1-soft:#c80f35; --a1-deep:#c80f35; --a1-line:rgba(224,16,58,.3);
+  --a1-grad:linear-gradient(118deg,#ff8fa5 0%,#ff3358 46%,#e5103b 100%); --a1-ink:#fff;
+  --a1-text:#e0103a; --a1-tgrad:linear-gradient(118deg,#ff5a78 0%,#e0103a 52%,#c80f35 100%);
+  --name-grad:linear-gradient(112deg,#c80f35 6%,#ff3358 52%,#ff7a92 96%); --name-glow:rgba(255,51,88,.35);
+  /* accent 2: a softer berry pink for hairlines, frames and textures */
+  --a2:#e2486c; --a2-rgb:226,72,108; --a2-soft:#b5163d; --a2-line:rgba(226,72,108,.26);
+  --a2-grad:linear-gradient(118deg,#ff8fa5 0%,#ff3358 55%,#e0103a 100%); --a2-ink:#fff;
+  /* leaf green and seed yellow for the few small accents */
+  --leaf:#2f9e52; --leaf-rgb:47,158,82; --seed:#f6c94e;
+  --ok:#2f9e52; --ok-rgb:47,158,82; --no:#e0103a; --no-rgb:224,16,58;
+  /* depth: long soft shadows tinted with the berry */
+  --card:#fff; --card-line:#ffd6df;
+  --sh-1:0 24px 50px -30px rgba(200,15,53,.26);
+  --sh-2:0 40px 90px -44px rgba(200,15,53,.34);
+  --sh-img:drop-shadow(0 22px 34px rgba(200,15,53,.16));
+  --sh-btn-rgb:200,15,53;
+}
+
+/* ============================================================
+   palette 2: the inverted card. One dark card per page (the final price),
+   it gets the dark palette back. Copy the values from the dark :root of the brand.
+   ============================================================ */
+html.light .final .pricecard,html.light .is-dark{
+  --ivory:#f6efe9; --ivory-rgb:246,239,233;
+  --t-hi:#f6efe9; --t-mid:rgba(246,239,233,.78); --t-low:rgba(246,239,233,.6);
+  --a1-soft:#ffb3c0; --a1-text:#ff8fa3; --a1-line:rgba(255,93,122,.3); --a1-deep:#c92f52;
+  --a1-tgrad:linear-gradient(118deg,#ffc9d2 0%,#ff6f89 46%,#e03a5c 100%);
+  --name-grad:linear-gradient(112deg,#f8ead0,#ffb3c0 38%,#ff5d7a 78%);
+  --a2:#e2bf8b; --a2-rgb:226,191,139; --a2-soft:#f2dfbf; --a2-line:rgba(226,191,139,.26);
+  --a2-grad:linear-gradient(118deg,#f8ead0 0%,#e2bf8b 50%,#ad8750 100%);
+  --ok:#86efac; --ok-rgb:134,239,172; --no:#ff8a7a; --no-rgb:255,138,122;
+  --card:rgba(255,255,255,.05); --card-line:rgba(246,239,233,.12);
+  --dk-1:#3a1530; --dk-2:#2a0f22; --dk-3:#1d0a18;
+  color:var(--t-hi);
+}
+
+/* ============================================================
+   structure. From here on, nothing has a brand color. Do not touch per brand.
+   ============================================================ */
+html.light body{-webkit-font-smoothing:auto}
+
+/* text: bright accents become their dark text versions */
+html.light .gt-a1{background-image:var(--a1-tgrad)}
+html.light .hot{color:var(--a1-text)}
+html.light .product__name,html.light .hero h1 .gt-a1{filter:drop-shadow(0 12px 30px var(--name-glow))}
+
+/* cursor light and hero light */
+html.light #spot{mix-blend-mode:multiply;background:radial-gradient(circle 300px at var(--mx,50%) var(--my,30%),rgba(var(--a1-rgb),.12),transparent 62%)}
+html.light .hero__grid{opacity:.5}
+html.light .hero__beam{background:radial-gradient(circle,rgba(var(--a1-rgb),.26),rgba(var(--a2-rgb),.06) 42%,transparent 66%)}
+html.light .portrait .glow{opacity:.55}
+
+/* sections: white, and the plum sections become a faint wash of the brand */
+html.light .sec--plum{background:radial-gradient(120% 90% at 84% -10%,rgba(var(--a1-rgb),.1),transparent 55%),linear-gradient(180deg,var(--sf-2),var(--sf-3))}
+html.light .bg-dots::before{opacity:.55}
+html.light .offer{background:radial-gradient(120% 70% at 50% 0%,rgba(var(--a2-rgb),.1),transparent 55%),linear-gradient(180deg,var(--sf-3),var(--bg))}
+html.light .final{background:radial-gradient(120% 80% at 50% 0%,rgba(var(--a1-rgb),.1),transparent 55%),linear-gradient(180deg,var(--sf-3),var(--bg))}
+
+/* logos: one dark ink, so light and dark logo files all read on white */
+html.light .marquee img,html.light .creds img{filter:brightness(0) saturate(0);opacity:.62}
+
+/* the button: same gradient, the glow becomes a short soft shadow */
+html.light .btn{box-shadow:0 5px 0 var(--a1-deep),0 20px 40px -18px rgba(var(--sh-btn-rgb),.55),inset 0 1px 0 rgba(255,255,255,.6)}
+html.light .btn:hover{box-shadow:0 8px 0 var(--a1-deep),0 28px 54px -18px rgba(var(--sh-btn-rgb),.62),inset 0 1px 0 rgba(255,255,255,.65)}
+html.light .btn:active{box-shadow:0 1px 0 var(--a1-deep),0 10px 24px -14px rgba(var(--sh-btn-rgb),.5),inset 0 1px 0 rgba(255,255,255,.4)}
+html.light .btn--pulse{animation-name:btnPulseLight}
+@keyframes btnPulseLight{0%,100%{box-shadow:0 5px 0 var(--a1-deep),0 20px 40px -18px rgba(var(--sh-btn-rgb),.55),inset 0 1px 0 rgba(255,255,255,.6),0 0 0 0 rgba(var(--a1-rgb),.4)}
+  50%{box-shadow:0 5px 0 var(--a1-deep),0 24px 46px -18px rgba(var(--sh-btn-rgb),.62),inset 0 1px 0 rgba(255,255,255,.6),0 0 0 14px rgba(var(--a1-rgb),0)}}
+
+/* cards: the dark glass becomes a white card with a hairline and a soft long shadow */
+html.light .check,html.light .check:hover,html.light .bcard,html.light .mcard,html.light .use,html.light .bill,html.light .vstack,
+html.light .faq details,html.light .faq details[open],html.light .statrail,html.light .stop,html.light .svc__card,html.light .dash,
+html.light .safecard,html.light .pricecard,html.light .trip figure{background:var(--card);border-color:var(--card-line);box-shadow:var(--sh-1)}
+html.light .check:hover,html.light .faq details[open],html.light .stop:hover{border-color:var(--a2-line)}
+html.light .stop:hover,html.light .pricecard,html.light .safecard{box-shadow:var(--sh-2)}
+html.light .pricecard::before{background:radial-gradient(80% 50% at 50% 0%,rgba(var(--a1-rgb),.12),transparent 60%)}
+html.light .creds{background:var(--card);border-color:var(--card-line)}
+html.light .bcard__shot,html.light .stop__shot{background:linear-gradient(180deg,var(--sf-3),var(--sf-4))}
+html.light .pf{background:
+    radial-gradient(62% 44% at 88% -14%,rgba(var(--a1-rgb),.12),transparent 68%) padding-box,
+    linear-gradient(var(--card),var(--card)) padding-box,
+    linear-gradient(152deg,rgba(var(--a2-rgb),.45),rgba(var(--ivory-rgb),.06) 42%,rgba(var(--a1-rgb),.6)) border-box;box-shadow:var(--sh-2)}
+html.light .pf:hover{box-shadow:0 44px 90px -44px rgba(var(--ivory-rgb),.42)}
+html.light .pf__ava{box-shadow:0 0 0 1px var(--card-line),0 0 0 4px rgba(var(--a2-rgb),.1),0 8px 16px -8px rgba(var(--ivory-rgb),.4)}
+html.light .buyform input{background:#fff;border-color:rgba(var(--ivory-rgb),.18)}
+
+/* photos and frames: black shadows become ink shadows, no dark fade at the bottom */
+html.light .shotframe,html.light .about__photo .frame,html.light .browser,html.light .gif,html.light .mech__pic img,html.light .certshot,
+html.light .lectures figure,html.light .clip,html.light .reel,html.light .social .fb,html.light .notes img,html.light .rows__track img,
+html.light .fc,html.light .adc,html.light .lpb{box-shadow:var(--sh-2)}
+html.light .shotframe::after{display:none}
+html.light .reel::after{background:linear-gradient(transparent 64%,rgba(26,15,29,.6))}
+html.light .stage img,html.light .stop__shot img,html.light .bcard__shot img,html.light .who__stack img,html.light .pricecard .mock,
+html.light .mech__figure img,html.light .svc__art img,html.light .social .phone{filter:var(--sh-img)}
+html.light .fc--shot{background:var(--card);border-color:var(--card-line)}
+html.light .heat__body{background:rgba(255,255,255,.88)}
+html.light .heat__note,html.light .fc--badge,html.light .dash__tag{background:var(--ivory);color:#fff}
+html.light .heat__note>span{color:rgba(255,255,255,.72)}
+html.light .ring94 img{box-shadow:0 0 50px -12px rgba(var(--a1-rgb),.5)}
+html.light .quote__ava{box-shadow:0 0 0 5px rgba(var(--a1-rgb),.14),0 14px 30px -12px rgba(var(--ivory-rgb),.4)}
+
+/* the inverted card: the one dark moment on a white page */
+html.light .final .pricecard,html.light .is-dark{
+  background:radial-gradient(90% 60% at 50% 0,rgba(var(--a1-rgb),.2),transparent 62%),linear-gradient(170deg,var(--dk-1),var(--dk-2) 55%,var(--dk-3));
+  border-color:var(--dk-2);box-shadow:0 60px 120px -50px rgba(42,15,34,.6)}
+html.light .final .pricecard::before{background:radial-gradient(80% 50% at 50% 0,rgba(var(--a1-rgb),.24),transparent 60%)}
+html.light .final .pricecard .mock{filter:drop-shadow(0 22px 34px rgba(0,0,0,.5))}
+html.light .final .buyform input{background:rgba(255,255,255,.06);border-color:rgba(var(--ivory-rgb),.2);color:var(--t-hi)}
+
+html.light footer{border-top-color:var(--card-line)}
