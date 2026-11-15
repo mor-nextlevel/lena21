@@ -905,6 +905,17 @@ fbq('track','PageView');
   var CHECKOUT_URL='https://secure.cardcom.solutions/EA/EA5/6fdvgM8u50OG15tzRtSUjA/PaymentSP';
   /* רישום המייל אצל שייקה, לרשימה ״האגן האורגזמי- נוטשות עגלה״ ברב מסר */
   var SUBSCRIBE_URL='https://lena-forms.vercel.app/api/subscribe';
+  /* מאיפה הגיעה: התגית שבקישור של המודעה נשמרת לשבעה ימים, כמו חלון הקליק של מטא, ועוברת לקארדקום
+     בשדה 7 (עד 50 תווים). הלוח קורא אותה מהעסקה ומחלק לממומן ולאורגני. כניסה עם תגית חדשה מחליפה את הקודמת */
+  var SRC=(function(){
+    var v='';
+    try{
+      var q=new URLSearchParams(location.search),t=['utm_source','utm_medium','utm_campaign','utm_content'].map(function(k){return (q.get(k)||'').replace(/\|/g,' ').trim()});
+      if(t.join('')){v=t.join('|').slice(0,50);localStorage.setItem('nl_src',JSON.stringify({v:v,t:Date.now()}))}
+      else{var s=JSON.parse(localStorage.getItem('nl_src')||'null');if(s&&Date.now()-s.t<7*864e5){v=s.v}}
+    }catch(e){}
+    return v?'?custom_field_07='+encodeURIComponent(v):'';
+  })();
   document.querySelectorAll('form.buyform').forEach(function(f){
     var sent=false, em=f.querySelector('input[type=email]'), agree=f.querySelector('input[name=agree]');
     if(agree){agree.addEventListener('change',function(){f.classList.remove('noagree')})}
@@ -929,7 +940,7 @@ fbq('track','PageView');
       for(var i=0;i<16;i++){cid+='abcdefghijklmnopqrstuvwxyz0123456789'.charAt(Math.floor(Math.random()*36))}
       try{localStorage.setItem('nl_cid',JSON.stringify({id:cid,t:Date.now()}))}catch(e){}
       if(window.fbq){fbq('track','Lead',{},{eventID:'lead_'+cid});fbq('track','InitiateCheckout',{currency:'ILS',value:347},{eventID:'ic_'+cid})}
-      var went=false, go=function(){if(went){return}went=true;location.href=CHECKOUT_URL};
+      var went=false, go=function(){if(went){return}went=true;location.href=CHECKOUT_URL+SRC};
       if(!SUBSCRIBE_URL){setTimeout(go,600);return}
       /* הסליקה לא מחכה לרב מסר. אם הרישום איטי או נופל, עוברים בכל מקרה */
       var to=setTimeout(go,2500);
